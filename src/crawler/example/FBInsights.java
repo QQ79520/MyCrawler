@@ -25,8 +25,8 @@ public class FBInsights {
 		// >>>Fill here<<< 
 		String uri = 
 				"https://graph.facebook.com/v2.5"
-				+ "/search?"  // 補完
-				+ "&access_token=";  
+				+ "/search?q=%E9%9D%A0%E5%8C%97&type=page&fields=id,likes,name,talking_about_count"  // 補完
+				+ "&access_token=CAAYDuWZBsTowBAE9rMeNNuFFFpEYz4mqVugsai28oZCUT1UpFcrS0T0jX5ODIQZC6RvfAbAblXfKaR8GZCgLMtoSwS0ZAj4ie2Ol9ZCRAJ9RjRHYAWHiiWjnZAVn0zxIh9J8wrSrLZA5a04hup3h2sCKULBSnfK8FSk7bnFzZAhGCSqQ4lVCz2efCEvREDFonsOkZD";  
 
 		// Jsoup select 後回傳的是  Elements 物件
 		Elements elems =
@@ -41,10 +41,10 @@ public class FBInsights {
 			
 			// 如何取出資料??
 			// >>>Fill here<<< 
-			String id =  data.select("").text();
-			String likes = data.select("").text();
-			String name = data.select("").text();
-			String talking_about_count = data.select("").text();
+			String id =  data.select("id").text();
+			String likes = data.select("likes").text();
+			String name = data.select("name").text();
+			String talking_about_count = data.select("talking_about_count").text();
 			
 			output += id+","+likes+",\""+name+"\","+talking_about_count+"\n";
 		}

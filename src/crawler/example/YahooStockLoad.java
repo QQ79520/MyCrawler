@@ -23,8 +23,8 @@ public class YahooStockLoad {
 	
 	static Logger log = LoggerFactory.getLogger(YahooStockLoad.class);
 
-	final static String mongodbServer = ""; // your host name
-	final static String mongodbDB = "";     // your db name
+	final static String mongodbServer = "128.199.204.20"; // your host name
+	final static String mongodbDB = "stock";     // your db name
 
 	public static void main(String[] args) {
 		
@@ -34,7 +34,7 @@ public class YahooStockLoad {
 
 			DB db = mongoClient.getDB( mongodbDB );
 			
-			DBCollection coll = db.getCollection("TransDetail");
+			DBCollection coll = db.getCollection("QQ79520");
 			
 			// 總筆數
 			log.debug("total row of detail: {}", coll.getCount());
