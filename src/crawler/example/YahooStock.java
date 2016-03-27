@@ -53,7 +53,7 @@ public class YahooStock {
 			forkException.toString();
 		}
 
-		crawlerStockByNumber(stockNumber);
+		//crawlerStockByNumber(stockNumber);
 	}
 
 	/**
